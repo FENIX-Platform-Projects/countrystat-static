@@ -217,6 +217,42 @@ define(function(){
             }
         },
 
+        //Congo COG
+        "COG": {
+            catalog: {
+                el: "",
+                lang: "",
+                defaultSelectors: ['resourceType', 'contextSystem'],
+                environment: "",
+                hideCloseButton: true,
+                pluginRegistry: {
+                    contextSystem: {
+                        selector: {
+                            id: "dropdown",
+                            source: [
+                                {value: "cstat_cog", label: "CountrySTAT Congo"}
+                            ],
+                            default: ["cstat_cog"],
+                            hideSummary: true,
+                            config: {
+                                plugins: ['remove_button'],
+                                mode: 'multi'
+                            }
+                        },
+
+                        template: {
+                            hideRemoveButton: false
+                        },
+
+                        format: {
+                            output: "enumeration",
+                            metadataAttribute: "dsd.contextSystem"
+                        }
+                    }
+                }
+            }
+        },
+
         //Ethiopia ETH
         "ETH": {
             catalog: {
